@@ -1,5 +1,6 @@
 import React from "react";
-
+import Image from "next/image";
+import nyImage from "../public/github-profile.jpg"
 import { Box, Container, Typography, Paper } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
@@ -9,7 +10,7 @@ const About = () => {
       id="about"
       sx={{ width: "100%", py: 16, display: "flex", alignItems: "center" }}
     >
-      <Container >
+      <Container>
         <Grid container spacing={8}>
           <Grid item xs={12} md={8}>
             <Typography
@@ -70,7 +71,14 @@ const About = () => {
                 },
               }}
             >
-            
+              <Image
+                className="rounded-xl"
+                src={nyImage}
+                alt="GitHub Profile"
+                width={380}
+                height={380}
+                style={{ borderRadius: "8px" }}
+              />
             </Paper>
           </Grid>
         </Grid>

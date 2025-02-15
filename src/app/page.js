@@ -6,7 +6,7 @@ import { Box, Container, Typography, Paper } from "@mui/material";
 export default function Home() {
   return (
     <>
-      <Container maxWidth="xxl" sx={{ marginTop: 5, marginBottom: 1 }}>
+      <Container  sx={{ marginTop: 5, marginBottom: 1 }}>
       
             <About />
        
