@@ -1,5 +1,5 @@
+import React, {useState} from "react";
 import Image from "next/image";
-
 import nyImage from "../../public/github-profile.jpg";
 import html from "../../public/html.png";
 import css from "../../public/css-image.png";
@@ -8,6 +8,7 @@ import node from "../../public/node.png";
 import react from "../../public/React-icon.png";
 import aws from "../../public/aws image.png";
 import git from "../../public/git-png.png";
+
 
 export default function Home() {
   return (
