@@ -8,6 +8,15 @@ import node from "../../public/node.png";
 import react from "../../public/React-icon.png";
 import aws from "../../public/aws image.png";
 import git from "../../public/git-png.png";
+import MedMapDash from '../../components/MedscanMapDash.jsx';
+import MedscanAppModal from "../../components/MedscanAppModal";
+import MlabApp from "../../components/MlabApp";
+import MedscanDashModal from "../../components/MedscanDashModal";
+import MedscanMap from "../../public/Medscan Map screen shot.png";
+import Mlab from "../../public/mlab screen shot.png";
+import MobileImage from "../../public/Medscan test history screen shot.png";
+import MedscanTest from "../../public/Medscan Map screen shot.png";
+
 
 
 export default function Home() {
