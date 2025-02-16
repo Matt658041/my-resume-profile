@@ -1,4 +1,6 @@
-import React, {useState} from "react";
+"use client"
+
+import React, { useState } from "react";
 import Image from "next/image";
 import nyImage from "../../public/github-profile.jpg";
 import html from "../../public/html.png";
@@ -8,7 +10,7 @@ import node from "../../public/node.png";
 import react from "../../public/React-icon.png";
 import aws from "../../public/aws image.png";
 import git from "../../public/git-png.png";
-import MedMapDash from '../../components/MedscanMapDash.jsx';
+import MedscanMapDash from '../../components/MedscanMapDash.jsx';
 import MedscanAppModal from "../../components/MedscanAppModal";
 import MlabApp from "../../components/MlabApp";
 import MedscanDashModal from "../../components/MedscanDashModal";
@@ -17,9 +19,79 @@ import Mlab from "../../public/mlab screen shot.png";
 import MobileImage from "../../public/Medscan test history screen shot.png";
 import MedscanTest from "../../public/Medscan Map screen shot.png";
 
-
+const steps = [
+  {
+    label: "Medscan Map",
+    component: (
+      <div className="relative inline-block">
+        <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+          Click to expand
+        </div>
+      </div>
+    ),
+    modal: MedscanMapDash,
+  },
+  {
+    label: "Medscan Mobile App",
+    component: (
+      <div className="relative inline-block">
+        <Image
+          src={MobileImage}
+          alt="Medscan Mobile App"
+          width={400}
+          height={400}
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+          Click to expand
+        </div>
+      </div>
+    ),
+    modal: MedscanAppModal,
+  },
+  {
+    label: "Mlab App",
+    component: (
+      <div className="relative inline-block">
+        <Image src={Mlab} alt="Mlab App" width={400} height={400} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+          Click to expand
+        </div>
+      </div>
+    ),
+    modal: MlabApp,
+  },
+  {
+    label: "Medscan Dash",
+    component: (
+      <div className="relative inline-block">
+        <Image src={MedscanTest} alt="Medscan Dash" width={400} height={400} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+          Click to expand
+        </div>
+      </div>
+    ),
+    modal: MedscanDashModal,
+  },
+];
 
 export default function Home() {
+  const [activeStep, setActiveStep] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [ModalComponent, setModalComponent] = useState(null);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleImageClick = (ModalComponent) => {
+    setModalComponent(() => ModalComponent);
+    setModalOpen(true);
+  };
   return (
     <>
       <div id="about" className="w-full py-5 flex items-center">
@@ -164,6 +236,48 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="w-full">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl py-4">Projects</h2>
+          <div className="flex flex-col items-center mb-4">
+            <div
+              onClick={() => handleImageClick(steps[activeStep].modal)}
+              className="mb-4 cursor-pointer"
+            >
+              {steps[activeStep].component}
+            </div>
+            <div className="flex justify-between w-full max-w-md">
+              <button
+                className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
+                onClick={handleBack}
+                disabled={activeStep === 0}
+              >
+                Back
+              </button>
+              <div className="flex space-x-2">
+                {steps.map((step, index) => (
+                  <div
+                    key={index}
+                    className={`h-2 w-2 rounded-full ${
+                      index === activeStep ? "bg-gray-700" : "bg-gray-300"
+                    }`}
+                  ></div>
+                ))}
+              </div>
+              <button
+                className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
+                onClick={handleNext}
+                disabled={activeStep === steps.length - 1}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          {ModalComponent && (
+            <ModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} />
+          )}
         </div>
       </div>
     </>
