@@ -264,11 +264,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl py-4">Projects</h2>
           <div className="flex flex-col items-center mb-4">
-            <div
-              onClick={() => handleImageClick(steps[activeStep].modal)}
-              className="mb-4 cursor-pointer"
-            >
-              {steps[activeStep].component}
+            <div className="mb-4 cursor-pointer">
+              {!modalOpen && steps[activeStep].component}
+              {modalOpen && (
+                <ModalComponent
+                  modalOpen={modalOpen}
+                  setModalOpen={setModalOpen}
+                />
+              )}
             </div>
             <div className="flex justify-between w-full max-w-md">
               <button
@@ -297,9 +300,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-          {ModalComponent && (
-            <ModalComponent modalOpen={modalOpen} setModalOpen={setModalOpen} />
-          )}
         </div>
       </div>
     </>
