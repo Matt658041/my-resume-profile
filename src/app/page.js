@@ -18,6 +18,11 @@ import MedscanMap from "../../public/Medscan Map screen shot.png";
 import Mlab from "../../public/mlab screen shot.png";
 import MobileImage from "../../public/Medscan test history screen shot.png";
 import MedscanTest from "../../public/Medscan Map screen shot.png";
+import { AiOutlineMail } from "react-icons/ai";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import Link from "next/link";
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
@@ -245,12 +250,11 @@ export default function Home() {
         </div>
       </div>
 
-     
       <div className="w-full">
         <div className="max-w-7xl mx-auto">
-        <p className="text-xl tracking-widest uppercase text-[#01010e]">
-          Projects
-        </p>
+          <p className="text-xl tracking-widest uppercase text-[#01010e]">
+            Projects
+          </p>
           <h2 className="text-4xl py-4"></h2>
           <div className="flex flex-col items-center mb-4">
             <div className="mb-4 cursor-pointer">
@@ -296,6 +300,46 @@ export default function Home() {
           </div>
         </div>
       </div>
+       <div className="max-w-7xl mx-auto">
+          <p className="text-xl tracking-widest uppercase mt-10 text-[#01010e]">
+            Contact
+          </p>
+      <div className="flex gap-x-5 items-center justify-between py-4 max-w-[330px] m-auto ">
+        <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <Link href="https://www.linkedin.com/in/matthew-boisse-b3a296224/">
+            <FaLinkedinIn
+              a
+              href="www.linkedin.com/in/matthew-boisse-b3a296224"
+            />
+          </Link>
+        </div>
+        <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <Link href="https://github.com/Matt658041">
+            <FaGithub />
+          </Link>
+        </div>
+        <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <Link href="mailto:matthewboisse@gmail.com">
+            <AiOutlineMail />
+          </Link>
+        </div>
+        <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <Link href="mailto:matthewboisse@gmail.com">
+            <BsFillPersonLinesFill />
+          </Link>
+        </div>
+      </div>
+      <div className="flex justify-center py-12">
+        <Link href="/">
+          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            <HiOutlineChevronDoubleUp
+              className="m-auto text-[#213571]"
+              size={30}
+            />
+          </div>
+        </Link>
+        </div>
+        </div>
     </>
   );
 }
