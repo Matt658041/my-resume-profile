@@ -26,12 +26,14 @@ export default function Home() {
 
   const handleNext = () => {
     setModalOpen(false);
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % steps.length);
   };
 
   const handleBack = () => {
     setModalOpen(false);
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    setActiveStep(
+      (prevActiveStep) => (prevActiveStep - 1 + steps.length) % steps.length
+    );
   };
 
   const handleImageClick = (ModalComponent) => {
