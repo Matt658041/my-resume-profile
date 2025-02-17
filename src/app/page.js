@@ -244,9 +244,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+     
       <div className="w-full">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl py-4">Projects</h2>
+        <p className="text-xl tracking-widest uppercase text-[#01010e]">
+          Projects
+        </p>
+          <h2 className="text-4xl py-4"></h2>
           <div className="flex flex-col items-center mb-4">
             <div className="mb-4 cursor-pointer">
               {!modalOpen && steps[activeStep].component}
