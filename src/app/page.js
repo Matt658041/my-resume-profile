@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import node from "../../public/node.png";
 import react from "../../public/React-icon.png";
 import aws from "../../public/aws image.png";
 import git from "../../public/git-png.png";
-import MedscanMapDash from '../../components/MedscanMapDash.jsx';
+import MedscanMapDash from "../../components/MedscanMapDash.jsx";
 import MedscanAppModal from "../../components/MedscanAppModal";
 import MlabApp from "../../components/MlabApp";
 import MedscanDashModal from "../../components/MedscanDashModal";
@@ -19,72 +19,18 @@ import Mlab from "../../public/mlab screen shot.png";
 import MobileImage from "../../public/Medscan test history screen shot.png";
 import MedscanTest from "../../public/Medscan Map screen shot.png";
 
-const steps = [
-  {
-    label: "Medscan Map",
-    component: (
-      <div className="relative inline-block">
-        <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-          Click to expand
-        </div>
-      </div>
-    ),
-    modal: MedscanMapDash,
-  },
-  {
-    label: "Medscan Mobile App",
-    component: (
-      <div className="relative inline-block">
-        <Image
-          src={MobileImage}
-          alt="Medscan Mobile App"
-          width={400}
-          height={400}
-        />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-          Click to expand
-        </div>
-      </div>
-    ),
-    modal: MedscanAppModal,
-  },
-  {
-    label: "Mlab App",
-    component: (
-      <div className="relative inline-block">
-        <Image src={Mlab} alt="Mlab App" width={400} height={400} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-          Click to expand
-        </div>
-      </div>
-    ),
-    modal: MlabApp,
-  },
-  {
-    label: "Medscan Dash",
-    component: (
-      <div className="relative inline-block">
-        <Image src={MedscanTest} alt="Medscan Dash" width={400} height={400} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-          Click to expand
-        </div>
-      </div>
-    ),
-    modal: MedscanDashModal,
-  },
-];
-
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
   const [ModalComponent, setModalComponent] = useState(null);
 
   const handleNext = () => {
+    setModalOpen(false);
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
 
   const handleBack = () => {
+    setModalOpen(false);
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
@@ -92,6 +38,80 @@ export default function Home() {
     setModalComponent(() => ModalComponent);
     setModalOpen(true);
   };
+
+  const steps = [
+    {
+      label: "Medscan Map",
+      component: (
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(MedscanMapDash)}
+        >
+          <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+            Click to expand
+          </div>
+        </div>
+      ),
+      modal: MedscanMapDash,
+    },
+    {
+      label: "Medscan Mobile App",
+      component: (
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(MedscanAppModal)}
+        >
+          <Image
+            src={MobileImage}
+            alt="Medscan Mobile App"
+            width={400}
+            height={400}
+          />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+            Click to expand
+          </div>
+        </div>
+      ),
+      modal: MedscanAppModal,
+    },
+    {
+      label: "Mlab App",
+      component: (
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(MlabApp)}
+        >
+          <Image src={Mlab} alt="Mlab App" width={400} height={400} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+            Click to expand
+          </div>
+        </div>
+      ),
+      modal: MlabApp,
+    },
+    {
+      label: "Medscan Dash",
+      component: (
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(MedscanDashModal)}
+        >
+          <Image
+            src={MedscanTest}
+            alt="Medscan Dash"
+            width={400}
+            height={400}
+          />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+            Click to expand
+          </div>
+        </div>
+      ),
+      modal: MedscanDashModal,
+    },
+  ];
+
   return (
     <>
       <div id="about" className="w-full py-5 flex items-center">

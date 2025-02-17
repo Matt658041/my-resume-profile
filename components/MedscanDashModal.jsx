@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import MedscanTest from "../public/Medscan test history screen shot.png"
-import { XIcon } from "@heroicons/react/solid"; // Importing a close icon from Heroicons
+import HighlightOff from "@mui/icons-material/HighlightOff";
 
 function MedscanDashModal({ modalOpen, setModalOpen }) {
+    if (!modalOpen) return null;
   return (
     <>
       {modalOpen && (
@@ -13,7 +14,7 @@ function MedscanDashModal({ modalOpen, setModalOpen }) {
               onClick={() => setModalOpen(false)}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
             >
-              <XIcon className="h-6 w-6" />
+              <HighlightOff className="h-6 w-6" />
             </button>
             <h2 className="text-2xl font-bold text-center py-2">
               Medscan Dash Test History Page
