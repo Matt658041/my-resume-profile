@@ -8,7 +8,7 @@ function MedscanDashModal({ modalOpen, setModalOpen }) {
   return (
     <>
       {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center shadow-xl rounded-xl  bg-opacity-50">
           <div className="relative bg-white rounded-lg shadow-lg w-3/4 h-3/4 max-w-full max-h-full overflow-auto p-4">
             <button
               onClick={() => setModalOpen(false)}
