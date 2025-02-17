@@ -22,22 +22,18 @@ import MedscanTest from "../../public/Medscan Map screen shot.png";
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
-  const [ModalComponent, setModalComponent] = useState(null);
 
   const handleNext = () => {
-    setModalOpen(false);
     setActiveStep((prevActiveStep) => (prevActiveStep + 1) % steps.length);
   };
 
   const handleBack = () => {
-    setModalOpen(false);
     setActiveStep(
       (prevActiveStep) => (prevActiveStep - 1 + steps.length) % steps.length
     );
   };
 
-  const handleImageClick = (ModalComponent) => {
-    setModalComponent(() => ModalComponent);
+  const handleImageClick = () => {
     setModalOpen(true);
   };
 
@@ -45,10 +41,7 @@ export default function Home() {
     {
       label: "Medscan Map",
       component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MedscanMapDash)}
-        >
+        <div className="relative inline-block" onClick={handleImageClick}>
           <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
             Click to expand
@@ -60,10 +53,7 @@ export default function Home() {
     {
       label: "Medscan Mobile App",
       component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MedscanAppModal)}
-        >
+        <div className="relative inline-block" onClick={handleImageClick}>
           <Image
             src={MobileImage}
             alt="Medscan Mobile App"
@@ -80,10 +70,7 @@ export default function Home() {
     {
       label: "Mlab App",
       component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MlabApp)}
-        >
+        <div className="relative inline-block" onClick={handleImageClick}>
           <Image src={Mlab} alt="Mlab App" width={400} height={400} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
             Click to expand
@@ -95,10 +82,7 @@ export default function Home() {
     {
       label: "Medscan Dash",
       component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MedscanDashModal)}
-        >
+        <div className="relative inline-block" onClick={handleImageClick}>
           <Image
             src={MedscanTest}
             alt="Medscan Dash"
@@ -266,17 +250,19 @@ export default function Home() {
           <div className="flex flex-col items-center mb-4">
             <div className="mb-4 cursor-pointer">
               {!modalOpen && steps[activeStep].component}
-              {modalOpen && (
-                <ModalComponent
-                  modalOpen={modalOpen}
-                  setModalOpen={setModalOpen}
-                />
-              )}
+              {modalOpen &&
+                React.createElement(steps[activeStep].modal, {
+                  modalOpen: modalOpen,
+                  setModalOpen: setModalOpen,
+                })}
             </div>
             <div className="flex justify-between w-full max-w-md">
               <button
                 className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
-                onClick={handleBack}
+                onClick={() => {
+                  handleBack();
+                  setModalOpen(true);
+                }}
                 disabled={activeStep === 0}
               >
                 Back
@@ -293,7 +279,10 @@ export default function Home() {
               </div>
               <button
                 className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
-                onClick={handleNext}
+                onClick={() => {
+                  handleNext();
+                  setModalOpen(true);
+                }}
                 disabled={activeStep === steps.length - 1}
               >
                 Next
