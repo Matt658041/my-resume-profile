@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import MedscanDrawerScreen from "../public/Medscan test history screen shot.png";
-import SolarUhomepage from "../public/IMG_749489934D7D-1.jpeg"
+import SolarUphones from "../public/Screenshot 2025-02-18 at 1.29.04 PM.png"
 import HighlightOff from "@mui/icons-material/HighlightOff";
 
 function SolarU ({ modalOpen, setModalOpen }) {
@@ -22,10 +22,10 @@ function SolarU ({ modalOpen, setModalOpen }) {
             </h2>
             <div className="flex justify-center">
               <Image
-                src={SolarUhomepage}
+                src={SolarUphones}
                 alt="Solar U Mobile App"
-                width={800}
-                height={600}
+                width={900}
+                height={800}
                 className="rounded-lg"
               />
             </div>
