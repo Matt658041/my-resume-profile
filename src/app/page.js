@@ -186,7 +186,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="skills" className="w-full lg:h-screen p-2 pt-0 ">
+      <div id="skills" className="py-5, mb-7 ">
         <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Skills
@@ -289,7 +289,7 @@ export default function Home() {
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Projects
           </p>
-          <h2 className="text-4xl py-4">My Work</h2>
+          <h2 className="text-xl py-4">My Work</h2>
           <div className="flex flex-col items-center mb-4">
             <div className="mb-4 cursor-pointer">
               {!modalOpen && steps[activeStep].component}
