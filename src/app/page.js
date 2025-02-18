@@ -26,11 +26,12 @@ import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Navbar from "../../components/Navbar";
 import SolarUphones from "../../public/Screenshot 2025-02-18 at 1.29.04 PM.png";
-import MedscanMobileImage from "../../public/Screenshot 2025-02-18 at 1.39.32 PM.png"
+import MedscanMobileImage from "../../public/Screenshot 2025-02-18 at 1.39.32 PM.png";
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => (prevActiveStep + 1) % steps.length);
@@ -42,7 +43,8 @@ export default function Home() {
     );
   };
 
-  const handleImageClick = () => {
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
     setModalOpen(true);
   };
 
@@ -50,7 +52,10 @@ export default function Home() {
     {
       label: "Medscan Map",
       component: (
-        <div className="relative inline-block" onClick={handleImageClick}>
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(MedscanMap)}
+        >
           <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
             Click to expand
@@ -62,7 +67,10 @@ export default function Home() {
     {
       label: "Solar U",
       component: (
-        <div className="relative inline-block" onClick={handleImageClick}>
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(SolarUphones)}
+        >
           <Image src={SolarUphones} alt="Solar U" width={400} height={400} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
             Click to expand
@@ -74,7 +82,10 @@ export default function Home() {
     {
       label: "Medscan Mobile App",
       component: (
-        <div className="relative inline-block" onClick={handleImageClick}>
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(MedscanMobileImage)}
+        >
           <Image
             src={MedscanMobileImage}
             alt="Medscan Mobile App"
@@ -91,7 +102,10 @@ export default function Home() {
     {
       label: "Mlab App",
       component: (
-        <div className="relative inline-block" onClick={handleImageClick}>
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(Mlab)}
+        >
           <Image src={Mlab} alt="Mlab App" width={400} height={400} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
             Click to expand
@@ -103,7 +117,10 @@ export default function Home() {
     {
       label: "Medscan Dash",
       component: (
-        <div className="relative inline-block" onClick={handleImageClick}>
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(MedscanTest)}
+        >
           <Image
             src={MedscanTest}
             alt="Medscan Dash"
@@ -272,7 +289,7 @@ export default function Home() {
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Projects
           </p>
-          <h2 className="text-4xl py-4"></h2>
+          <h2 className="text-4xl py-4">My Work</h2>
           <div className="flex flex-col items-center mb-4">
             <div className="mb-4 cursor-pointer">
               {!modalOpen && steps[activeStep].component}
@@ -285,10 +302,7 @@ export default function Home() {
             <div className="flex justify-between w-full max-w-md">
               <button
                 className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
-                onClick={() => {
-                  handleBack();
-                  setModalOpen(true);
-                }}
+                onClick={handleBack}
                 disabled={activeStep === 0}
               >
                 Back
@@ -305,10 +319,7 @@ export default function Home() {
               </div>
               <button
                 className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
-                onClick={() => {
-                  handleNext();
-                  setModalOpen(true);
-                }}
+                onClick={handleNext}
                 disabled={activeStep === steps.length - 1}
               >
                 Next
@@ -317,46 +328,43 @@ export default function Home() {
           </div>
         </div>
       </div>
-       <div id="contact" className="max-w-7xl mx-auto">
-          <p className="text-xl tracking-widest uppercase mt-10 text-[#01010e]">
-            Contact
-          </p>
-      <div className="flex gap-x-5 items-center justify-between py-4 max-w-[330px] m-auto ">
-        <div className=" rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-          <Link href="https://www.linkedin.com/in/matthew-boisse-b3a296224/">
-            <FaLinkedinIn
-              
-              href="www.linkedin.com/in/matthew-boisse-b3a296224"
-            />
-          </Link>
+      <div id="contact" className="max-w-7xl mx-auto">
+        <p className="text-xl tracking-widest uppercase mt-10 text-[#01010e]">
+          Contact
+        </p>
+        <div className="flex gap-x-5 items-center justify-between py-4 max-w-[330px] m-auto">
+          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            <Link href="https://www.linkedin.com/in/matthew-boisse-b3a296224/">
+              <FaLinkedinIn />
+            </Link>
+          </div>
+          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            <Link href="https://github.com/Matt658041">
+              <FaGithub />
+            </Link>
+          </div>
+          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            <Link href="mailto:matthewboisse@gmail.com">
+              <AiOutlineMail />
+            </Link>
+          </div>
+          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            <Link href="mailto:matthewboisse@gmail.com">
+              <BsFillPersonLinesFill />
+            </Link>
+          </div>
         </div>
-        <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-          <Link href="https://github.com/Matt658041">
-            <FaGithub />
-          </Link>
-        </div>
-        <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-          <Link href="mailto:matthewboisse@gmail.com">
-            <AiOutlineMail />
-          </Link>
-        </div>
-        <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-          <Link href="mailto:matthewboisse@gmail.com">
-            <BsFillPersonLinesFill />
+        <div className="flex justify-center py-12">
+          <Link href="/">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <HiOutlineChevronDoubleUp
+                className="m-auto text-[#213571]"
+                size={30}
+              />
+            </div>
           </Link>
         </div>
       </div>
-      <div className="flex justify-center py-12">
-        <Link href="/">
-          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-            <HiOutlineChevronDoubleUp
-              className="m-auto text-[#213571]"
-              size={30}
-            />
-          </div>
-        </Link>
-        </div>
-        </div>
     </>
   );
 }
