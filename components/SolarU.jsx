@@ -30,7 +30,7 @@ function SolarU ({ modalOpen, setModalOpen }) {
               />
             </div>
             <p className="py-2">
-             Solar U stuff goes here. 
+            Developed a mobile app that uses Nasa's api to retrieve temporal daily data to measure the Solar Insolation levels within the users location and incorporate it with temperature values to store and display the data in a graph format. The app also uses AppleHealthKit to retrieve the users heart rate, blood pressure, and other health data. This app is designed to help measure the users mood and well being based on very specific Solar Insolation data.
             </p>
           </div>
         </div>
