@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MedscanDrawerScreen from "../public/Medscan test history screen shot.png"
-import MobileImage from "../public/mlab screen shot.png"
+import MedscanAppImage from "../public/Screenshot 2025-02-18 at 1.39.32 PM.png"
 import HighlightOff from "@mui/icons-material/HighlightOff";
 
 
@@ -23,7 +22,7 @@ function MedscanAppModal({ modalOpen, setModalOpen }) {
             </h2>
             <div className="flex justify-center">
               <Image
-                src={MedscanDrawerScreen}
+                src={MedscanAppImage}
                 alt="Medscan Mobile App"
                 width={800}
                 height={600}

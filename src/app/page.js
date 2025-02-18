@@ -26,6 +26,7 @@ import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Navbar from "../../components/Navbar";
 import SolarUphones from "../../public/Screenshot 2025-02-18 at 1.29.04 PM.png";
+import MedscanMobileImage from "../../public/Screenshot 2025-02-18 at 1.39.32 PM.png"
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
@@ -75,7 +76,7 @@ export default function Home() {
       component: (
         <div className="relative inline-block" onClick={handleImageClick}>
           <Image
-            src={MobileImage}
+            src={MedscanMobileImage}
             alt="Medscan Mobile App"
             width={400}
             height={400}
