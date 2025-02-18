@@ -18,24 +18,22 @@ const Navbar = () => {
             />
           </Link>
           <p className="text-lg ml-4">
-            Let's build something together
+            Let's build something legendary together
           </p>
         </div>
-        <div>
-          <ul className="flex space-x-8 pr-10">
-            <li className="text-lg uppercase hover:border-b">
-              <Link href="/#about">About</Link>
-            </li>
-            <li className="text-lg uppercase hover:border-b">
-              <Link href="/#skills">Skills</Link>
-            </li>
-            <li className="text-lg uppercase hover:border-b">
-              <Link href="/#projects">Projects</Link>
-            </li>
-            <li className="text-lg uppercase hover:border-b pr-10">
-              <Link href="/#contact">Contact</Link>
-            </li>
-          </ul>
+        <div className="flex-row space-x-4 hidden md:flex">
+          <div className="text-lg uppercase hover:border-b">
+            <Link href="/#about">About</Link>
+          </div>
+          <div className="text-lg uppercase hover:border-b ">
+            <Link href="/#skills">Skills</Link>
+          </div>
+          <div className="text-lg uppercase hover:border-b">
+            <Link href="/#projects">Projects</Link>
+          </div>
+          <div className="text-lg uppercase hover:border-b pr-10">
+            <Link href="/#contact">Contact</Link>
+          </div>
         </div>
       </div>
     </div>
