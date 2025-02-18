@@ -23,6 +23,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import Navbar from "../../components/Navbar";
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
@@ -105,6 +106,7 @@ export default function Home() {
 
   return (
     <>
+      <Navbar />
       <div id="about" className="w-full py-5 flex items-center">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8">
           <div>
