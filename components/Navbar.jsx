@@ -5,9 +5,9 @@ import navImage from "../public/github-profile.jpg"; // Replace with your nav im
 
 const Navbar = () => {
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100] bg-white/70 backdrop-blur ">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <div className="flex items-center space-x-4 p-5">
+    <div className="fixed w-full h-20 shadow-xl z-[100] bg-white/70 backdrop-blur">
+      <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
+        <div className="flex items-center space-x-4 py-5">
           <Link href="/">
             <Image
               className="rounded-lg"
@@ -17,10 +17,12 @@ const Navbar = () => {
               height="80"
             />
           </Link>
-          <p className="text-lg">Let's build something legendary together</p>
+          <p className="text-lg ml-4">
+            Let's build something together
+          </p>
         </div>
         <div>
-          <ul className="flex space-x-2 pr-20">
+          <ul className="flex space-x-8 pr-10">
             <li className="text-lg uppercase hover:border-b">
               <Link href="/#about">About</Link>
             </li>
@@ -30,7 +32,7 @@ const Navbar = () => {
             <li className="text-lg uppercase hover:border-b">
               <Link href="/#projects">Projects</Link>
             </li>
-            <li className="text-lg uppercase hover:border-b pr-20">
+            <li className="text-lg uppercase hover:border-b pr-10">
               <Link href="/#contact">Contact</Link>
             </li>
           </ul>
