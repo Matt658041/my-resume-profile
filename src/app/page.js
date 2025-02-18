@@ -14,6 +14,7 @@ import MedscanMapDash from "../../components/MedscanMapDash.jsx";
 import MedscanAppModal from "../../components/MedscanAppModal";
 import MlabApp from "../../components/MlabApp";
 import MedscanDashModal from "../../components/MedscanDashModal";
+import SolarU from "../../components/SolarU";
 import MedscanMap from "../../public/Medscan Map screen shot.png";
 import Mlab from "../../public/mlab screen shot.png";
 import MobileImage from "../../public/Medscan test history screen shot.png";
@@ -24,6 +25,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Navbar from "../../components/Navbar";
+import SolarUHomepage from "../../public/IMG_749489934D7D-1.jpeg";
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);
@@ -55,6 +57,18 @@ export default function Home() {
         </div>
       ),
       modal: MedscanMapDash,
+    },
+    {
+      label: "Solar U",
+      component: (
+        <div className="relative inline-block" onClick={handleImageClick}>
+          <Image src={SolarUHomepage} alt="Solar U" width={400} height={400} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+            Click to expand
+          </div>
+        </div>
+      ),
+      modal: SolarU,
     },
     {
       label: "Medscan Mobile App",
@@ -92,8 +106,8 @@ export default function Home() {
           <Image
             src={MedscanTest}
             alt="Medscan Dash"
-            width={400}
-            height={400}
+            width={600}
+            height={600}
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
             Click to expand
