@@ -252,7 +252,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full">
+      <div id="projects" className="w-full">
         <div className="max-w-7xl mx-auto">
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Projects
@@ -302,7 +302,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-       <div className="max-w-7xl mx-auto">
+       <div id="contact" className="max-w-7xl mx-auto">
           <p className="text-xl tracking-widest uppercase mt-10 text-[#01010e]">
             Contact
           </p>
