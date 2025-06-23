@@ -31,6 +31,7 @@ export default function Navbar() {
               </div>
 
               {/* Logo + Nav Links */}
+              
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 {/* Logo */}
                 <div className="flex-shrink-0 flex items-center">
