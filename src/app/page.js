@@ -138,7 +138,19 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      <section className="w-full flex flex-col items-center justify-center mt-8 mb-8">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-center text-gray-900 drop-shadow-lg">
+          Matthew Boisse
+        </h1>
+        <h2 className="mt-4 text-2xl md:text-3xl text-center text-gray-700 font-medium">
+          Full Stack Developer & Digital Health Engineer
+        </h2>
+        <p className="mt-4 max-w-2xl text-center text-lg text-gray-600">
+          Building impactful web and mobile solutions for global health,
+          research, and innovation.
+        </p>
+      </section>
+
       <div id="about" className="w-full py-5 flex items-center">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8">
           <div>
