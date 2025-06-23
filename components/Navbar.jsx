@@ -11,26 +11,11 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-900 shadow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Centered Navigation Links */}
-          <div className="flex-1 flex justify-center">
-            <div className="flex space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-white hover:text-gray-300 text-sm font-medium"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Top Right Rounded Image */}
-          <div className="flex-shrink-0">
+    <nav className="bg-gray-900 shadow-sm fixed w-full z-50">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 items-center justify-between">
+          {/* Logo on the left */}
+          <div className="flex items-center">
             <Link href="/">
               <Image
                 src={navImage}
@@ -41,6 +26,18 @@ export default function Navbar() {
                 priority
               />
             </Link>
+          </div>
+          {/* Centered nav links */}
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden sm:flex space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-200 hover:border-gray-400 hover:text-white transition"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
