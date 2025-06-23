@@ -17,6 +17,7 @@ const Navbar = () => {
               width={60}
               height={60}
             />
+            
           </Link>
         </div>
         {/* Centered nav links */}
