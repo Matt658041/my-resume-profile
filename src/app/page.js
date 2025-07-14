@@ -138,7 +138,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="w-full flex flex-col items-center justify-center mt-8 mb-8">
+      <section className="w-full flex flex-col items-center justify-center mt-8 mb-8 px-4">
         <h1 className="text-5xl md:text-6xl font-extrabold text-center text-gray-900 drop-shadow-lg">
           Matthew Boisse
         </h1>
@@ -151,7 +151,7 @@ export default function Home() {
         </p>
       </section>
 
-      <div id="about" className="w-full py-5 flex items-center">
+      <div id="about" className="w-full py-5 flex items-center px-4">
         <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8">
           <div>
             <p className="text-xl tracking-widest uppercase text-[#12113a]">
@@ -198,7 +198,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="skills" className="py-5, mb-7 ">
+
+      <div id="skills" className="py-5 mb-7 px-4">
         <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Skills
@@ -296,7 +297,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="projects" className="w-full">
+      <div id="projects" className="w-full px-4">
         <div className="max-w-7xl mx-auto">
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Projects
@@ -340,7 +341,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="contact" className="max-w-7xl mx-auto">
+
+      <div id="contact" className="max-w-7xl mx-auto px-4">
         <p className="text-xl tracking-widest uppercase mt-10 text-[#01010e]">
           Contact
         </p>
@@ -360,7 +362,6 @@ export default function Home() {
               <AiOutlineMail />
             </Link>
           </div>
-         
         </div>
         <div className="flex justify-center py-12">
           <Link href="/">
