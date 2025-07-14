@@ -34,7 +34,7 @@ function MedscanAppModal({ modalOpen, setModalOpen }) {
             className="rounded-lg"
           />
         </div>
-        <p className="py-2">
+        <p className="py-2  text-white">
           Developed a mobile app for iOS and Android to support healthcare
           workers in Kenya. Enabled point-of-care specimen collection and
           diagnostic test analysis for schistosomiasis. Facilitated real-time

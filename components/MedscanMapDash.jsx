@@ -34,7 +34,7 @@ function MedscanMapDash({ modalOpen, setModalOpen }) {
             className="rounded-lg"
           />
         </div>
-        <p className="py-2">
+        <p className="py-2  text-white">
           Designed and developed an interactive map for real-time visualization
           of study results. Enhanced project oversight with features tailored
           for administrators, project managers, and sponsors. Incorporated a

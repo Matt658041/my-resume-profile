@@ -157,7 +157,7 @@ export default function Home() {
             <p className="text-xl tracking-widest uppercase text-[#12113a]">
               About
             </p>
-            <h2 className="py-4">Who I Am</h2>
+            <h2 className="py-4 text-xl text-white">Who I Am</h2>
             <p className="py-2 text-white">
               My journey into software development was driven by a desire to
               create better, more functional websites than what I was
@@ -204,7 +204,7 @@ export default function Home() {
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Skills
           </p>
-          <h2 className="py-4">What I Can Do</h2>
+          <h2 className="py-4 text-xl text-white">What I Can Do</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-2 gap-4 justify-center items-center">
@@ -302,7 +302,7 @@ export default function Home() {
           <p className="text-xl tracking-widest uppercase text-[#01010e]">
             Projects
           </p>
-          <h2 className="text-xl py-4">My Work</h2>
+          <h2 className="text-xl py-4  text-white">My Work</h2>
           <div className="flex flex-col items-center mb-4">
             <div className="mb-4 cursor-pointer">
               {!modalOpen && steps[activeStep].component}

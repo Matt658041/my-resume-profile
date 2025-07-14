@@ -34,7 +34,7 @@ function MedscanDashModal({ modalOpen, setModalOpen }) {
             className="rounded-lg"
           />
         </div>
-        <p className="py-2">
+        <p className="py-2  text-white">
           Designed and developed an interactive web dashboard for real-time
           visualization and sorting of study results. Enhanced project so that
           when the user clicked on the map it navigated to and selected the

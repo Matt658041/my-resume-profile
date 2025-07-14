@@ -35,7 +35,7 @@ function SolarU({ modalOpen, setModalOpen }) {
             className="rounded-lg"
           />
         </div>
-        <p className="py-2">
+        <p className="py-2  text-white">
           Developed a mobile app that uses Nasa's api to retrieve temporal daily
           data to measure the Solar Insolation levels within the users location
           and incorporate it with temperature values to store and display the

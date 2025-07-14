@@ -34,7 +34,7 @@ function MlabApp({ modalOpen, setModalOpen }) {
             className="rounded-lg"
           />
         </div>
-        <p className="py-2">
+        <p className="py-2  text-white">
           Collaborated with Columbia University on a mobile health application
           for HIV/Syphilis tracking. Designed user-friendly interfaces for
           self-diagnostic tests with step-by-step guidance. Implemented photo
