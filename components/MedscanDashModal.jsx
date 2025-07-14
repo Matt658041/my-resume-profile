@@ -22,7 +22,7 @@ function MedscanDashModal({ modalOpen, setModalOpen }) {
         >
           <HighlightOff className="h-6 w-6" />
         </button>
-        <h2 className="text-2xl font-bold text-center py-2">
+        <h2 className="text-2xl font-bold text-center  text-white py-2">
           Medscan Dash Test History Page
         </h2>
         <div className="flex justify-center">
