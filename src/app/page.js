@@ -360,11 +360,7 @@ export default function Home() {
               <AiOutlineMail />
             </Link>
           </div>
-          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-            <Link href="mailto:matthewboisse@gmail.com">
-              <BsFillPersonLinesFill />
-            </Link>
-          </div>
+         
         </div>
         <div className="flex justify-center py-12">
           <Link href="/">
