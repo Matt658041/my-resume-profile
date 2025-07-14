@@ -25,8 +25,8 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Navbar from "../../components/Navbar";
-import SolarUphones from "../../public/Screenshot 2025-02-18 at 1.29.04 PM.png";
-import MedscanMobileImage from "../../public/Screenshot 2025-02-18 at 1.39.32 PM.png";
+import SolarUphones from "../../public/Slide2.jpeg";
+import MedscanMobileImage from "../../public/Slide1.jpeg";
 
 export default function Home() {
   const [activeStep, setActiveStep] = useState(0);

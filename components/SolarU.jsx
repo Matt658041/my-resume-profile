@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import MedscanDrawerScreen from "../public/Medscan test history screen shot.png";
-import SolarUphones from "../public/Screenshot 2025-02-18 at 1.29.04 PM.png"
+import SolarUphones from "../public/Slide2.jpeg"
 import HighlightOff from "@mui/icons-material/HighlightOff";
 
 function SolarU ({ modalOpen, setModalOpen }) {

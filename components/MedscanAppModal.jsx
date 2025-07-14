@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import MedscanAppImage from "../public/Screenshot 2025-02-18 at 1.39.32 PM.png"
+import MedscanAppImage from "../public/Slide1.jpeg"
 import HighlightOff from "@mui/icons-material/HighlightOff";
 
 
