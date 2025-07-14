@@ -32,10 +32,12 @@ function MedscanAppModal({ modalOpen, setModalOpen }) {
             <p className="py-2">
               Developed a mobile app for iOS and Android to support healthcare
               workers in Kenya. Enabled point-of-care specimen collection and
-              diagnostic test analysis for schistosomiasis. Integrated
-              interactive maps and barcode scanning for streamlined data
-              collection and analysis. Facilitated real-time data sharing with
-              public health stakeholders.
+              diagnostic test analysis for schistosomiasis. Facilitated
+              real-time data sharing with public health stakeholders. Expanded
+              usage to seven countries (US, Netherlands, England, Kenya, Brazil,
+              Cotê d'Ivoiré, Uganda) with plans for Malawi and Madagascar. •
+              Conducted 4,000 tests (2,500 surveillance, 1,500 lab tests) with
+              an average of 500 new tests per week.
             </p>
           </div>
         </div>

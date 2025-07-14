@@ -50,36 +50,6 @@ export default function Home() {
 
   const steps = [
     {
-      label: "Medscan Map",
-      component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MedscanMap)}
-        >
-          <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-            Click to expand
-          </div>
-        </div>
-      ),
-      modal: MedscanMapDash,
-    },
-    {
-      label: "Solar U",
-      component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(SolarUphones)}
-        >
-          <Image src={SolarUphones} alt="Solar U" width={400} height={400} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-            Click to expand
-          </div>
-        </div>
-      ),
-      modal: SolarU,
-    },
-    {
       label: "Medscan Mobile App",
       component: (
         <div
@@ -100,19 +70,19 @@ export default function Home() {
       modal: MedscanAppModal,
     },
     {
-      label: "Mlab App",
+      label: "Medscan Map",
       component: (
         <div
           className="relative inline-block"
-          onClick={() => handleImageClick(Mlab)}
+          onClick={() => handleImageClick(MedscanMap)}
         >
-          <Image src={Mlab} alt="Mlab App" width={400} height={400} />
+          <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
             Click to expand
           </div>
         </div>
       ),
-      modal: MlabApp,
+      modal: MedscanMapDash,
     },
     {
       label: "Medscan Dash",
@@ -133,6 +103,36 @@ export default function Home() {
         </div>
       ),
       modal: MedscanDashModal,
+    },
+    {
+      label: "Solar U",
+      component: (
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(SolarUphones)}
+        >
+          <Image src={SolarUphones} alt="Solar U" width={400} height={400} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+            Click to expand
+          </div>
+        </div>
+      ),
+      modal: SolarU,
+    },
+    {
+      label: "Mlab App",
+      component: (
+        <div
+          className="relative inline-block"
+          onClick={() => handleImageClick(Mlab)}
+        >
+          <Image src={Mlab} alt="Mlab App" width={400} height={400} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
+            Click to expand
+          </div>
+        </div>
+      ),
+      modal: MlabApp,
     },
   ];
 
