@@ -5,7 +5,7 @@ import Image from "next/image";
 import nyImage from "../../public/github-profile.jpg";
 import html from "../../public/html.png";
 import css from "../../public/css-image.png";
-import js from "../../public/js.png";
+import js from "../../public/typescript_original_logo_icon_146317.webp";
 import node from "../../public/node.png";
 import react from "../../public/React-icon.png";
 import aws from "../../public/aws image.png";
@@ -234,7 +234,7 @@ export default function Home() {
                   <Image src={js} width="64px" height="64px" alt="/" />
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                  <h3>Javascript</h3>
+                  <h3>TypeScript</h3>
                 </div>
               </div>
             </div>
