@@ -1,49 +1,73 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import MedscanDrawerScreen from "../public/Medscan test history screen shot.png";
 import SolarUphones from "../public/Slide2.jpeg";
-import HighlightOff from "@mui/icons-material/HighlightOff";
 
 function SolarU({ modalOpen, setModalOpen }) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   if (!modalOpen) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-green bg-opacity-60"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-6 py-6"
       onClick={() => setModalOpen(false)}
     >
       <div
-        className="relative bg-white rounded-lg shadow-lg w-3/4 h-3/4 max-w-full max-h-full overflow-auto p-4"
+        className="relative bg-white rounded-[2rem] shadow-2xl border-2 border-emerald-600 w-full max-w-5xl max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          onClick={() => setModalOpen(false)}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
-          style={{ right: "16px", top: "16px", position: "absolute" }}
-        >
-          <HighlightOff className="h-6 w-6" />
-        </button>
-        <h2 className="text-2xl font-bold text-center  text-white py-2">
-          SolarU Mobile App
-        </h2>
-        <div className="flex justify-center">
-          <Image
-            src={SolarUphones}
-            alt="Solar U Mobile App"
-            width={900}
-            height={800}
-            className="rounded-lg"
-          />
+        <div className="p-6">
+          <div className="flex items-start justify-between mb-4">
+            <div>
+              <h2 className="text-xl font-bold text-gray-900">Solar U</h2>
+              <p className="text-xs text-emerald-600 font-medium mt-0.5">
+                Lead Front-End Developer
+              </p>
+            </div>
+            <button
+              onClick={() => setModalOpen(false)}
+              className="text-gray-400 hover:text-gray-600 transition-colors ml-4 mt-1"
+              aria-label="Close"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="rounded-xl overflow-hidden bg-gray-100 mb-4">
+            <Image
+              src={SolarUphones}
+              alt="Solar U Mobile App"
+              width={900}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Developed a mobile app using NASA&apos;s API to retrieve temporal
+            daily data measuring Solar Insolation levels within the user&apos;s
+            location. Incorporated temperature values to store and display data
+            in graph format. Uses AppleHealthKit and Google Health to retrieve
+            heart rate, blood pressure, and other health data to measure mood
+            and wellbeing based on precise Solar Insolation metrics.
+          </p>
         </div>
-        <p className="py-2  text-white">
-          Developed a mobile app that uses Nasa's api to retrieve temporal daily
-          data to measure the Solar Insolation levels within the users location
-          and incorporate it with temperature values to store and display the
-          data in a graph format. The app also uses AppleHealthKit to retrieve
-          the users heart rate, blood pressure, and other health data. This app
-          is designed to help measure the users mood and well being based on
-          very specific Solar Insolation data.
-        </p>
       </div>
     </div>
   );

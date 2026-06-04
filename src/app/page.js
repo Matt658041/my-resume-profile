@@ -17,8 +17,7 @@ import MedscanDashModal from "../../components/MedscanDashModal";
 import SolarU from "../../components/SolarU";
 import MedscanMap from "../../public/Medscan Map screen shot.png";
 import Mlab from "../../public/mlab screen shot.png";
-import MobileImage from "../../public/Medscan test history screen shot.png";
-import MedscanTest from "../../public/Medscan Map screen shot.png";
+import MedscanTestHistoryImage from "../../public/Medscan test history screen shot.png";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -73,7 +72,7 @@ export default function Home() {
       tech: "React · Material UI · JavaScript · AWS Amplify",
       description:
         "Interactive web dashboard for administrators, project managers, and sponsors with full resource and staff audit histories to improve data accessibility.",
-      image: MedscanTest,
+      image: MedscanTestHistoryImage,
       modal: MedscanDashModal,
     },
     {
