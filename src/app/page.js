@@ -39,7 +39,7 @@ export default function Home() {
 
   const handleBack = () => {
     setActiveStep(
-      (prevActiveStep) => (prevActiveStep - 1 + steps.length) % steps.length
+      (prevActiveStep) => (prevActiveStep - 1 + steps.length) % steps.length,
     );
   };
 
@@ -205,94 +205,25 @@ export default function Home() {
             Skills
           </p>
           <h2 className="py-4 text-xl text-white">What I Can Do</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={html} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>HTML</h3>
-                </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { src: html, label: "HTML" },
+              { src: css, label: "CSS" },
+              { src: js, label: "TypeScript" },
+              { src: node, label: "Node" },
+              { src: react, label: "React" },
+              { src: react, label: "React Native" },
+              { src: aws, label: "AWS" },
+              { src: git, label: "Git" },
+            ].map(({ src, label }) => (
+              <div
+                key={label}
+                className="flex flex-col items-center justify-center gap-2 p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
+              >
+                <Image src={src} width={48} height={48} alt={label} />
+                <h3 className="text-sm font-medium text-center">{label}</h3>
               </div>
-            </div>
-
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={css} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>CSS</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={js} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>TypeScript</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={node} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>Node</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={react} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>React</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={react} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>React Native</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={aws} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>AWS</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-              <div className="grid grid-cols-2 gap-4 justify-center items-center">
-                <div className="m-auto">
-                  <Image src={git} width="64px" height="64px" alt="/" />
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                  <h3>Git</h3>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
