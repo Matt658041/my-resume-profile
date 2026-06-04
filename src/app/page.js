@@ -161,6 +161,9 @@ export default function Home() {
         </div>
       </div>
 
+
+      
+
       {/* ── Skills ── */}
       {/* ── Projects ── */}
       <div id="projects" className="w-full px-4 py-16 border-b border-gray-200">
