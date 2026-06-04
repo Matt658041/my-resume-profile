@@ -50,139 +50,103 @@ export default function Home() {
 
   const steps = [
     {
-      label: "Medscan Mobile App",
-      component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MedscanMobileImage)}
-        >
-          <Image
-            src={MedscanMobileImage}
-            alt="Medscan Mobile App"
-            width={400}
-            height={400}
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-            Click to expand
-          </div>
-        </div>
-      ),
+      label: "Medscan: Mobile App",
+      role: "Lead Front-End Developer",
+      tech: "React Native · Expo Go · AWS Amplify · React Native Maps · Formik",
+      description:
+        "iOS & Android app enabling point-of-care specimen collection and diagnostic test analysis for schistosomiasis. Deployed across 7 countries with 4,000+ tests conducted.",
+      image: MedscanMobileImage,
       modal: MedscanAppModal,
     },
     {
-      label: "Medscan Map",
-      component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MedscanMap)}
-        >
-          <Image src={MedscanMap} alt="Medscan Map" width={400} height={400} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-            Click to expand
-          </div>
-        </div>
-      ),
+      label: "Medscan: Map Dashboard",
+      role: "Lead Front-End Developer",
+      tech: "React · React Leaflet · Material UI · AWS Amplify",
+      description:
+        "Dynamic map tracking disease prevalence in Kenyan schools with search, filters, editable pop-ups, and carousels for real-time visualization of study results.",
+      image: MedscanMap,
       modal: MedscanMapDash,
     },
     {
-      label: "Medscan Dash",
-      component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(MedscanTest)}
-        >
-          <Image
-            src={MedscanTest}
-            alt="Medscan Dash"
-            width={600}
-            height={600}
-          />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-            Click to expand
-          </div>
-        </div>
-      ),
+      label: "Medscan: Web Dashboard",
+      role: "Lead Front-End Developer",
+      tech: "React · Material UI · JavaScript · AWS Amplify",
+      description:
+        "Interactive web dashboard for administrators, project managers, and sponsors with full resource and staff audit histories to improve data accessibility.",
+      image: MedscanTest,
       modal: MedscanDashModal,
     },
     {
       label: "Solar U",
-      component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(SolarUphones)}
-        >
-          <Image src={SolarUphones} alt="Solar U" width={400} height={400} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-            Click to expand
-          </div>
-        </div>
-      ),
+      role: "Lead Front-End Developer",
+      tech: "React Native · AppleHealthKit · Google Health · AWS Amplify · Expo Go",
+      description:
+        "Mobile app using NASA's API to retrieve Solar Insolation data and correlate it with health metrics (heart rate, blood pressure) to measure user mood and wellbeing.",
+      image: SolarUphones,
       modal: SolarU,
     },
     {
-      label: "Mlab App",
-      component: (
-        <div
-          className="relative inline-block"
-          onClick={() => handleImageClick(Mlab)}
-        >
-          <Image src={Mlab} alt="Mlab App" width={400} height={400} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded text-center pointer-events-none">
-            Click to expand
-          </div>
-        </div>
-      ),
+      label: "mLab+",
+      role: "Lead Front-End Developer",
+      tech: "React Native · Formik · Axios · Vercel SWR · Expo Go · AWS Amplify",
+      description:
+        "Collaborated with Columbia University on a mobile health app for HIV/Syphilis tracking with photo capture, cloud-based test analysis, and participant enrollment.",
+      image: Mlab,
       modal: MlabApp,
     },
   ];
 
   return (
     <>
-      <section className="w-full flex flex-col items-center justify-center mt-8 mb-8 px-4">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-center text-gray-900 drop-shadow-lg">
-          Matthew Boisse
-        </h1>
-        <h2 className="mt-4 text-2xl md:text-3xl text-center text-gray-600 font-medium">
-          Full Stack Developer & Digital Health Engineer
-        </h2>
-        <p className="mt-4 max-w-2xl text-center text-lg text-gray-600">
-          Building impactful web and mobile solutions for global health,
-          research, and innovation.
-        </p>
+      {/* ── Hero ── */}
+      <section className="w-full flex flex-col items-center justify-center pt-16 pb-12 px-4 border-b border-gray-200">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-sm tracking-widest uppercase text-emerald-600 mb-3">
+            Portfolio
+          </p>
+          <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+            Matthew Boisse
+          </h1>
+          <h2 className="mt-4 text-xl md:text-2xl text-gray-600 font-medium">
+            Web &amp; Mobile Application Developer
+          </h2>
+          <p className="mt-4 text-base text-gray-500 max-w-2xl mx-auto">
+            Seasoned developer with the Mobile Health for Global Health (MHGH)
+            research group at Vanderbilt University. Specializing in
+            cutting-edge solutions that aid in the control and elimination of
+            infectious diseases in low-resource settings.
+          </p>
+        </div>
       </section>
 
-      <div id="about" className="w-full py-10 px-4">
-        <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8 items-start">
+      {/* ── About ── */}
+      <div id="about" className="w-full py-16 px-4 border-b border-gray-200">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="text-xl tracking-widest uppercase text-emerald-600">
+            <p className="text-sm tracking-widest uppercase text-emerald-600">
               About
             </p>
-            <h2 className="py-4 text-xl text-gray-900">Who I Am</h2>
-            <p className="py-2 text-gray-600">
-              My journey into software development was driven by a desire to
-              create better, more functional websites than what I was
-              encountering. This passion motivated me to complete a Full Stack
-              Web Development Bootcamp at Vanderbilt University, where I built a
-              strong foundation in modern web technologies. From there, I
-              pursued self-guided learning, consistently pushing myself to
-              master new skills and technologies. This commitment to growth
-              quickly led to securing an entry-level developer position, which I
-              rapidly outgrew by consistently exceeding expectations. In my
-              current role as a developer for the Mobile Health for Global
-              Health (MHGH) research group at Vanderbilt University, I have led
-              the frontend development of several impactful projects, including
-              Medscan and mLab+. Medscan is a web dashboard and mobile health
-              application that supports large-scale epidemiology studies in
-              Kenya, while mLab+, developed in collaboration with Columbia
-              University, is a mobile application facilitating HIV and Syphilis
-              testing. My software is directly used by research participants and
-              public health officials, ensuring that these projects have
-              real-world impact and consequences. My responsibilities included
-              building interactive, user-friendly interfaces, optimizing data
-              visualization, and ensuring seamless integration with backend
-              services. These projects required close collaboration with
-              interdisciplinary teams, rapid learning of new technologies, and
-              the application of best practices in Agile development.
+            <h2 className="mt-2 mb-4 text-3xl font-bold text-gray-900">
+              Who I Am
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              I&apos;m a full-stack developer at the Mobile Health for Global
+              Health (MHGH) research group at Vanderbilt University, where I
+              lead front-end development on applications directly used by
+              healthcare workers and public health officials across seven
+              countries.
+            </p>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              My work spans mobile apps built in React Native, interactive web
+              dashboards in React, and cloud infrastructure on AWS. I completed
+              Vanderbilt&apos;s Full Stack Web Development Bootcamp in 2022 and
+              have since earned an AWS Cloud Practitioner badge and CITI Program
+              certification for Human Research.
+            </p>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              I bring strong skills in pattern recognition, data analysis, and
+              problem-solving, and thrive in Agile, interdisciplinary teams
+              building software with real-world impact.
             </p>
           </div>
           <div className="md:pt-[4.5rem]">
@@ -198,18 +162,137 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="skills" className="py-5 mb-7 px-4">
-        <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-          <p className="text-xl tracking-widest uppercase text-emerald-600">
+      {/* ── Skills ── */}
+      {/* ── Projects ── */}
+      <div id="projects" className="w-full px-4 py-16 border-b border-gray-200">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm tracking-widest uppercase text-emerald-600">
+            Projects
+          </p>
+          <h2 className="mt-2 mb-8 text-3xl font-bold text-gray-900">
+            My Work
+          </h2>
+
+          {modalOpen ? (
+            React.createElement(steps[activeStep].modal, {
+              modalOpen: modalOpen,
+              setModalOpen: setModalOpen,
+            })
+          ) : (
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              {/* Image frame — fixed height, consistent across all slides */}
+              <div
+                className="relative w-full h-72 sm:h-96 cursor-pointer group bg-gray-100"
+                onClick={() => handleImageClick(steps[activeStep].image)}
+              >
+                <Image
+                  src={steps[activeStep].image}
+                  alt={steps[activeStep].label}
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 896px"
+                />
+                {/* Persistent hint badge — fades out on hover when overlay takes over */}
+                <div className="absolute bottom-3 right-3 flex items-center gap-1.5 bg-black/40 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-3.5 w-3.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+                    />
+                  </svg>
+                  Expand
+                </div>
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-full">
+                    Click to expand
+                  </span>
+                </div>
+              </div>
+
+              {/* Card footer: label, description, navigation */}
+              <div className="px-6 py-5">
+                <div className="flex items-start justify-between gap-4 mb-1">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {steps[activeStep].label}
+                    </h3>
+                    <p className="text-xs font-medium text-emerald-600 mt-0.5">
+                      {steps[activeStep].role}
+                    </p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      {steps[activeStep].tech}
+                    </p>
+                    <p className="text-sm text-gray-600 mt-2">
+                      {steps[activeStep].description}
+                    </p>
+                  </div>
+                  <span className="text-xs text-gray-400 whitespace-nowrap pt-1">
+                    {activeStep + 1} / {steps.length}
+                  </span>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <button
+                    className="bg-gray-200 text-gray-600 px-5 py-2 rounded-lg hover:bg-gray-300 disabled:opacity-40 transition-colors text-sm font-medium"
+                    onClick={handleBack}
+                    disabled={activeStep === 0}
+                  >
+                    ← Back
+                  </button>
+
+                  <div className="flex space-x-2">
+                    {steps.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setActiveStep(index)}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          index === activeStep
+                            ? "bg-emerald-600 w-6"
+                            : "bg-gray-300 w-2"
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    className="bg-emerald-600 text-white px-5 py-2 rounded-lg hover:bg-emerald-700 disabled:opacity-40 transition-colors text-sm font-medium"
+                    onClick={handleNext}
+                    disabled={activeStep === steps.length - 1}
+                  >
+                    Next →
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* ── Skills ── */}
+      <div id="skills" className="py-16 px-4 border-b border-gray-200">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm tracking-widest uppercase text-emerald-600">
             Skills
           </p>
-          <h2 className="py-4 text-xl text-gray-900">What I Can Do</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+          <h2 className="mt-2 mb-8 text-3xl font-bold text-gray-900">
+            What I Can Do
+          </h2>
+
+          {/* Icon grid for primary technologies */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 mb-10">
             {[
               { src: html, label: "HTML" },
               { src: css, label: "CSS" },
               { src: js, label: "TypeScript" },
-              { src: node, label: "Node" },
+              { src: node, label: "Node.js" },
               { src: react, label: "React" },
               { src: react, label: "React Native" },
               { src: aws, label: "AWS" },
@@ -226,84 +309,149 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
 
-      <div id="projects" className="w-full px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xl tracking-widest uppercase text-emerald-600">
-            Projects
-          </p>
-          <h2 className="text-xl py-4 text-gray-900">My Work</h2>
-          <div className="flex flex-col items-center mb-4">
-            <div className="mb-4 cursor-pointer">
-              {!modalOpen && steps[activeStep].component}
-              {modalOpen &&
-                React.createElement(steps[activeStep].modal, {
-                  modalOpen: modalOpen,
-                  setModalOpen: setModalOpen,
-                })}
-            </div>
-            <div className="flex justify-between w-full max-w-md">
-              <button
-                className="bg-gray-200 text-gray-600 px-4 py-2 rounded hover:bg-gray-300 disabled:opacity-40 transition-colors"
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                Back
-              </button>
-              <div className="flex space-x-2">
-                {steps.map((step, index) => (
-                  <div
-                    key={index}
-                    className={`h-2 w-2 rounded-full ${
-                      index === activeStep ? "bg-emerald-600" : "bg-gray-300"
-                    }`}
-                  ></div>
-                ))}
+          {/* Full skill list grouped by category */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                category: "Frameworks & Libraries",
+                items:
+                  "React, Vite, React Native, React Native Paper, Material UI, Tailwind CSS, Next.js, Mongoose",
+              },
+              {
+                category: "Languages",
+                items: "TypeScript, JavaScript, HTML, CSS, SQL",
+              },
+              {
+                category: "Backend & Databases",
+                items: "Node.js, MongoDB, MySQL, RESTful APIs, Next.js",
+              },
+              {
+                category: "Deployment & Cloud",
+                items: "AWS Amplify, AWS EC2, Expo Go, Vercel, Heroku",
+              },
+              {
+                category: "Tools & Platforms",
+                items: "Git, GitHub, GitLab, Docker, REDCap, DHIS2",
+              },
+              {
+                category: "Testing",
+                items: "Vitest",
+              },
+            ].map(({ category, items }) => (
+              <div key={category} className="bg-white rounded-xl shadow-md p-5">
+                <p className="text-xs font-semibold tracking-widest uppercase text-emerald-600 mb-2">
+                  {category}
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">{items}</p>
               </div>
-              <button
-                className="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 disabled:opacity-40 transition-colors"
-                onClick={handleNext}
-                disabled={activeStep === steps.length - 1}
-              >
-                Next
-              </button>
-            </div>
+            ))}
           </div>
         </div>
       </div>
 
-      <div id="contact" className="max-w-7xl mx-auto px-4">
-        <p className="text-xl tracking-widest uppercase mt-10 text-emerald-600">
-          Contact
-        </p>
-        <div className="flex gap-x-5 items-center justify-between py-4 max-w-[330px] m-auto">
-          <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 hover:text-emerald-600 ease-in duration-300">
-            <Link href="https://www.linkedin.com/in/matthew-boisse-b3a296224/">
-              <FaLinkedinIn />
-            </Link>
-          </div>
-          <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 hover:text-emerald-600 ease-in duration-300">
-            <Link href="https://github.com/Matt658041">
-              <FaGithub />
-            </Link>
-          </div>
-          <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 hover:text-emerald-600 ease-in duration-300">
-            <Link href="mailto:matthewboisse@gmail.com">
-              <AiOutlineMail />
-            </Link>
+      {/* ── Education ── */}
+      <div id="education" className="py-16 px-4 border-b border-gray-200">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-sm tracking-widest uppercase text-emerald-600">
+            Education
+          </p>
+          <h2 className="mt-2 mb-8 text-3xl font-bold text-gray-900">
+            Background
+          </h2>
+          <div className="flex flex-col gap-4">
+            {[
+              {
+                degree: "Full Stack Web Development Certificate",
+                school: "Vanderbilt University",
+                location: "Nashville, TN",
+                year: "2022",
+              },
+              {
+                degree: "Bachelor of Science in Communications",
+                school: "Missouri State University",
+                location: "Springfield, MO",
+                year: "2000",
+              },
+            ].map(({ degree, school, location, year }) => (
+              <div
+                key={degree}
+                className="bg-white rounded-xl shadow-md p-5 flex items-start justify-between gap-4"
+              >
+                <div>
+                  <h3 className="text-base font-semibold text-gray-900">
+                    {degree}
+                  </h3>
+                  <p className="text-sm text-gray-600 mt-0.5">
+                    {school} &mdash; {location}
+                  </p>
+                </div>
+                <span className="text-sm text-emerald-600 font-medium whitespace-nowrap">
+                  {year}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="flex justify-center py-12">
-          <Link href="/">
-            <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <HiOutlineChevronDoubleUp
-                className="m-auto text-emerald-600"
-                size={30}
-              />
-            </div>
-          </Link>
+      </div>
+
+      {/* ── Contact ── */}
+      <div id="contact" className="py-16 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-sm tracking-widest uppercase text-emerald-600">
+            Contact
+          </p>
+          <h2 className="mt-2 mb-2 text-3xl font-bold text-gray-900">
+            Get In Touch
+          </h2>
+          <p className="text-gray-500 mb-10">
+            Feel free to reach out via any of the links below.
+          </p>
+          <div className="flex gap-6 items-center justify-center">
+            <Link
+              href="https://www.linkedin.com/in/matthew-boisse-b3a296224/"
+              className="flex flex-col items-center gap-2 group"
+            >
+              <div className="rounded-full bg-white shadow-md p-5 cursor-pointer group-hover:scale-110 group-hover:text-emerald-600 transition-all ease-in duration-300">
+                <FaLinkedinIn size={22} />
+              </div>
+              <span className="text-xs text-gray-500 group-hover:text-emerald-600 transition-colors">
+                LinkedIn
+              </span>
+            </Link>
+            <Link
+              href="https://github.com/Matt658041"
+              className="flex flex-col items-center gap-2 group"
+            >
+              <div className="rounded-full bg-white shadow-md p-5 cursor-pointer group-hover:scale-110 group-hover:text-emerald-600 transition-all ease-in duration-300">
+                <FaGithub size={22} />
+              </div>
+              <span className="text-xs text-gray-500 group-hover:text-emerald-600 transition-colors">
+                GitHub
+              </span>
+            </Link>
+            <Link
+              href="mailto:matthewboisse@gmail.com"
+              className="flex flex-col items-center gap-2 group"
+            >
+              <div className="rounded-full bg-white shadow-md p-5 cursor-pointer group-hover:scale-110 group-hover:text-emerald-600 transition-all ease-in duration-300">
+                <AiOutlineMail size={22} />
+              </div>
+              <span className="text-xs text-gray-500 group-hover:text-emerald-600 transition-colors">
+                Email
+              </span>
+            </Link>
+          </div>
+          <div className="flex justify-center mt-14">
+            <Link href="/">
+              <div className="rounded-full bg-white shadow-md p-4 cursor-pointer hover:scale-110 transition-all ease-in duration-300">
+                <HiOutlineChevronDoubleUp
+                  className="text-emerald-600"
+                  size={24}
+                />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </>
