@@ -142,7 +142,7 @@ export default function Home() {
         <h1 className="text-5xl md:text-6xl font-extrabold text-center text-gray-900 drop-shadow-lg">
           Matthew Boisse
         </h1>
-        <h2 className="mt-4 text-2xl md:text-3xl text-center text-gray-700 font-medium">
+        <h2 className="mt-4 text-2xl md:text-3xl text-center text-gray-600 font-medium">
           Full Stack Developer & Digital Health Engineer
         </h2>
         <p className="mt-4 max-w-2xl text-center text-lg text-gray-600">
@@ -151,14 +151,14 @@ export default function Home() {
         </p>
       </section>
 
-      <div id="about" className="w-full py-5 flex items-center px-4">
-        <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8">
+      <div id="about" className="w-full py-10 px-4">
+        <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 gap-8 items-start">
           <div>
-            <p className="text-xl tracking-widest uppercase text-[#12113a]">
+            <p className="text-xl tracking-widest uppercase text-emerald-600">
               About
             </p>
-            <h2 className="py-4 text-xl text-white">Who I Am</h2>
-            <p className="py-2 text-white">
+            <h2 className="py-4 text-xl text-gray-900">Who I Am</h2>
+            <p className="py-2 text-gray-600">
               My journey into software development was driven by a desire to
               create better, more functional websites than what I was
               encountering. This passion motivated me to complete a Full Stack
@@ -185,14 +185,13 @@ export default function Home() {
               the application of best practices in Agile development.
             </p>
           </div>
-          <div className="flex justify-center items-center">
-            <div className="w-full h-auto m-auto rounded-xl p-4 shadow-xl hover:scale-105 ease-in duration-300 flex justify-center items-center">
+          <div className="md:pt-[4.5rem]">
+            <div className="w-full rounded-xl overflow-hidden shadow-xl hover:scale-105 ease-in duration-300">
               <Image
-                className="rounded-xl"
+                className="w-full h-auto block"
                 src={nyImage}
                 alt="GitHub Profile"
-                width={440}
-                height={380}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -201,10 +200,10 @@ export default function Home() {
 
       <div id="skills" className="py-5 mb-7 px-4">
         <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-          <p className="text-xl tracking-widest uppercase text-[#01010e]">
+          <p className="text-xl tracking-widest uppercase text-emerald-600">
             Skills
           </p>
-          <h2 className="py-4 text-xl text-white">What I Can Do</h2>
+          <h2 className="py-4 text-xl text-gray-900">What I Can Do</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
             {[
               { src: html, label: "HTML" },
@@ -218,10 +217,12 @@ export default function Home() {
             ].map(({ src, label }) => (
               <div
                 key={label}
-                className="flex flex-col items-center justify-center gap-2 p-4 shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
+                className="flex flex-col items-center justify-center gap-2 p-4 bg-white shadow-md rounded-xl hover:scale-105 ease-in duration-300"
               >
                 <Image src={src} width={48} height={48} alt={label} />
-                <h3 className="text-sm font-medium text-center">{label}</h3>
+                <h3 className="text-sm font-medium text-center text-gray-900">
+                  {label}
+                </h3>
               </div>
             ))}
           </div>
@@ -230,10 +231,10 @@ export default function Home() {
 
       <div id="projects" className="w-full px-4">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xl tracking-widest uppercase text-[#01010e]">
+          <p className="text-xl tracking-widest uppercase text-emerald-600">
             Projects
           </p>
-          <h2 className="text-xl py-4  text-white">My Work</h2>
+          <h2 className="text-xl py-4 text-gray-900">My Work</h2>
           <div className="flex flex-col items-center mb-4">
             <div className="mb-4 cursor-pointer">
               {!modalOpen && steps[activeStep].component}
@@ -245,7 +246,7 @@ export default function Home() {
             </div>
             <div className="flex justify-between w-full max-w-md">
               <button
-                className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
+                className="bg-gray-200 text-gray-600 px-4 py-2 rounded hover:bg-gray-300 disabled:opacity-40 transition-colors"
                 onClick={handleBack}
                 disabled={activeStep === 0}
               >
@@ -256,13 +257,13 @@ export default function Home() {
                   <div
                     key={index}
                     className={`h-2 w-2 rounded-full ${
-                      index === activeStep ? "bg-gray-700" : "bg-gray-300"
+                      index === activeStep ? "bg-emerald-600" : "bg-gray-300"
                     }`}
                   ></div>
                 ))}
               </div>
               <button
-                className="bg-gray-300 text-gray-700 px-4 py-2 rounded disabled:opacity-50"
+                className="bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700 disabled:opacity-40 transition-colors"
                 onClick={handleNext}
                 disabled={activeStep === steps.length - 1}
               >
@@ -274,21 +275,21 @@ export default function Home() {
       </div>
 
       <div id="contact" className="max-w-7xl mx-auto px-4">
-        <p className="text-xl tracking-widest uppercase mt-10 text-[#01010e]">
+        <p className="text-xl tracking-widest uppercase mt-10 text-emerald-600">
           Contact
         </p>
         <div className="flex gap-x-5 items-center justify-between py-4 max-w-[330px] m-auto">
-          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 hover:text-emerald-600 ease-in duration-300">
             <Link href="https://www.linkedin.com/in/matthew-boisse-b3a296224/">
               <FaLinkedinIn />
             </Link>
           </div>
-          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 hover:text-emerald-600 ease-in duration-300">
             <Link href="https://github.com/Matt658041">
               <FaGithub />
             </Link>
           </div>
-          <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+          <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 hover:text-emerald-600 ease-in duration-300">
             <Link href="mailto:matthewboisse@gmail.com">
               <AiOutlineMail />
             </Link>
@@ -296,9 +297,9 @@ export default function Home() {
         </div>
         <div className="flex justify-center py-12">
           <Link href="/">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+            <div className="rounded-full bg-white shadow-md shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <HiOutlineChevronDoubleUp
-                className="m-auto text-[#213571]"
+                className="m-auto text-emerald-600"
                 size={30}
               />
             </div>
