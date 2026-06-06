@@ -15,9 +15,11 @@ import MedscanAppModal from "../../components/MedscanAppModal";
 import MlabApp from "../../components/MlabApp";
 import MedscanDashModal from "../../components/MedscanDashModal";
 import SolarU from "../../components/SolarU";
+import PiperModal from "../../components/PiperModal";
 import MedscanMap from "../../public/Medscan Map screen shot.png";
 import Mlab from "../../public/mlab screen shot.png";
 import MedscanTestHistoryImage from "../../public/Medscan test history screen shot.png";
+import PiperLanding from "../../public/PiperLanding.png";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -56,6 +58,15 @@ export default function Home() {
         "iOS & Android app enabling point-of-care specimen collection and diagnostic test analysis for schistosomiasis. Deployed across 7 countries with 4,000+ tests conducted.",
       image: MedscanMobileImage,
       modal: MedscanAppModal,
+    },
+    {
+      label: "PIPER",
+      role: "Lead Front-End Developer",
+      tech: "Vite · Electron · Computer Vision · Digital Image Analysis",
+      description:
+        "No-code desktop platform that enables researchers and clinicians to build advanced image analysis pipelines without programming expertise.",
+      image: PiperLanding,
+      modal: PiperModal,
     },
     {
       label: "Medscan: Map Dashboard",
@@ -160,8 +171,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      
 
       {/* ── Skills ── */}
       {/* ── Projects ── */}
