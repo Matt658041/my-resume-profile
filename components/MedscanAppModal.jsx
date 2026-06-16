@@ -68,7 +68,16 @@ function MedscanAppModal({ modalOpen, setModalOpen }) {
             data sharing with public health stakeholders. Expanded usage to
             seven countries (US, Netherlands, England, Kenya, Brazil, Côte
             d&apos;Ivoire, Uganda). Conducted 4,000+ tests with an average of
-            500 new tests per week.
+            500 new tests per week. Published research is available at{" "}
+            <a
+              href="https://www.frontiersin.org/journals/parasitology/articles/10.3389/fpara.2026.1837310/abstract"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-600 hover:text-emerald-800 transition-colors"
+            >
+              Frontiers in Parasitology
+            </a>
+            .
           </p>
         </div>
       </div>
