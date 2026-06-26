@@ -67,7 +67,7 @@ function MedscanAppModal({ modalOpen, setModalOpen }) {
             diagnostic test analysis for schistosomiasis. Facilitated real-time
             data sharing with public health stakeholders. Expanded usage to
             seven countries (US, Netherlands, England, Kenya, Brazil, Côte
-            d&apos;Ivoire, Uganda). Conducted 4,000+ tests with an average of
+            d&apos;Ivoire, Uganda). Conducted 13,000+ tests with an average of
             500 new tests per week. Published research is available at{" "}
             <a
               href="https://www.frontiersin.org/journals/parasitology/articles/10.3389/fpara.2026.1837310/abstract"
