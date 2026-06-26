@@ -55,7 +55,7 @@ export default function Home() {
       role: "Lead Front-End Developer",
       tech: "React Native · Expo Go · AWS Amplify · React Native Maps · Formik",
       description:
-        "iOS & Android app enabling point-of-care specimen collection and diagnostic test analysis for schistosomiasis. Deployed across 7 countries with 4,000+ tests conducted.",
+        "iOS & Android app enabling point-of-care specimen collection and diagnostic test analysis for schistosomiasis. Deployed across 7 countries with 13,000+ tests conducted.",
       image: MedscanMobileImage,
       modal: MedscanAppModal,
     },
